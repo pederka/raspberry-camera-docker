@@ -5,6 +5,8 @@ Runs a simple webcam stream from a Raspberry Pi with an onboard camera module.
 ## Building image
 If you just want to run the camera stream, it is recommended to pull the image directly from Dockerhub as described below. If you want to build the image yourself, for example if you make changes to the Dockerfile, do the following:
 
+    git clone https://github.com/pederka/raspberry-camera-docker.git
+    cd raspberry-camera-docker
     sudo docker build . -t raspberry-camera-stream
 
 ## Running image on a Raspberry pi
@@ -25,10 +27,11 @@ One-line command for installing Docker on a Raspberry Pi running raspbian:
     curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 
 ### Pull the Docker image
+Pull the pre-built Docker image from its Dockerhub repository:
 
     sudo docker pull pederaursand/raspberry-camera-stream
 
-### Running the image
+### Run the image
 
 On a running Raspberry Pi with the camera enabled, a webcam stream can be set up by running the image as follows:
 
